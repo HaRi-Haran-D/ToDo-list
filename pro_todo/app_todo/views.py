@@ -16,7 +16,7 @@ def completedTask(request,task_id):
     task.completed=True
     task.save()
     return redirect(home)
-
+ 
 def deleteTask(request, task_id):
     task = Todo.objects.get(id = task_id)
     task.delete()
